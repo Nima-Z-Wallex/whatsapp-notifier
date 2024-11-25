@@ -1,1 +1,2 @@
-# whatsapp-notifier
+# Project Name
+whatsapp-notifier
