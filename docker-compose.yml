@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  tron-monitor:
+    build: .
+    container_name: tron-monitor
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/.env
+      - ./addresses-groups.json:/app/address-groups.json
+    environment:
+      - TZ=UTC
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
